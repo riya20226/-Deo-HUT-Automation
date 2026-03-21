@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-03-21T22:23:19.775897" rpa="false" schemaversion="5">
+<suite id="s1" name="Deo Hut Tests" source="C:\Users\riyam\PycharmProjects\Deo-HUT-Automation\tests\deo_hut_tests.robot">
+<test id="s1-t1" name="Verify DEO HUT" line="8">
+<kw name="Open Deo Hut Website" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:23:20.052932" level="WARN">service_log_path is being deprecated. Please use service to configure log_output or equivalent service attribute.</msg>
+<msg time="2026-03-21T22:23:20.053464" level="INFO">Opening browser 'Firefox' to base url 'https://datalab-staging.unilever.com/public/deohut/studies'.</msg>
+<msg time="2026-03-21T22:23:20.053522" level="INFO">Browser driver log file created to: C:\Users\riyam\PycharmProjects\Deo-HUT-Automation\results\logs/gecko.log</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>service_log_path=logs/gecko.log</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-21T22:23:20.052705" elapsed="13.382451"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-21T22:23:33.436362" elapsed="0.408316"/>
+</kw>
+<status status="PASS" start="2026-03-21T22:23:20.051757" elapsed="13.793125"/>
+</kw>
+<kw name="Login With Email" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:23:33.850301" elapsed="1.244004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:23:35.094903" level="INFO">Typing text 'riya.mandal@unilever.com' into text field 'xpath://*[@id="i0116"]'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:23:35.094588" elapsed="0.192152"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:23:35.287511" level="INFO">Clicking element 'xpath://*[@id="idSIButton9"]'.</msg>
+<arg>${NEXT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:23:35.287096" elapsed="0.231428"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:23:35.519081" elapsed="0.970379"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:23:36.490429" level="INFO">Typing text 'Studytype@546#1' into text field 'xpath://*[@id="i0118"]'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:23:36.489883" elapsed="0.042000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:23:36.533227" level="INFO">Clicking element 'xpath://*[@id="idSIButton9"]'.</msg>
+<arg>${NEXT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:23:36.532547" elapsed="0.693534"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:23:47.656759" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-03-21T22:23:47.657348" level="FAIL">Element 'xpath=//*[@id="idSIButton9"]' not visible after 10 seconds.</msg>
+<arg>xpath=//*[@id="idSIButton9"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-03-21T22:23:37.227716" elapsed="10.502918">Element 'xpath=//*[@id="idSIButton9"]' not visible after 10 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//*[@id="idSIButton9"]</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-03-21T22:23:37.226587" elapsed="10.504366"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:23:47.732653" level="INFO">Clicking element 'xpath=//*[@id="idSIButton9"]'.</msg>
+<msg time="2026-03-21T22:23:48.018782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-03-21T22:23:48.019225" level="FAIL">ElementNotInteractableException: Message: Element &lt;input id="idSIButton9" class="win-button button_primary high-contrast-overrides button ext-button primary ext-primary" type="submit"&gt; could not be scrolled into view; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:371:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:165:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:134:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:328:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:210:31
+</msg>
+<arg>xpath=//*[@id="idSIButton9"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-03-21T22:23:47.732231" elapsed="0.397818">ElementNotInteractableException: Message: Element &lt;input id="idSIButton9" class="win-button button_primary high-contrast-overrides button ext-button primary ext-primary" type="submit"&gt; could not be scrolled into view; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:371:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:165:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:134:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:328:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:210:31
+</status>
+</kw>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="idSIButton9"]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-03-21T22:23:47.731367" elapsed="0.398959"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Studies</arg>
+<arg>60s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-21T22:23:48.130676" elapsed="11.338560"/>
+</kw>
+<status status="PASS" start="2026-03-21T22:23:33.849502" elapsed="25.620066"/>
+</kw>
+<kw name="Select Deodorant Category" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DEODORANTS_SELECTOR}</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:23:59.470940" elapsed="0.924105"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${DEODORANTS_SELECTOR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-21T22:24:00.395412" elapsed="0.298181"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:00.694867" level="INFO">Clicking element 'xpath=//label[@for="Deodorants"]'.</msg>
+<arg>${DEODORANTS_SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:24:00.694362" elapsed="0.168452"/>
+</kw>
+<status status="PASS" start="2026-03-21T22:23:59.470330" elapsed="1.392629"/>
+</kw>
+<kw name="Confirm Product Selection" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONFIRM_BUTTON}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:24:00.864362" elapsed="0.030339"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${CONFIRM_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-21T22:24:00.895542" elapsed="0.299764"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:01.196610" level="INFO">Clicking element 'css:.css-dq901w-MuiButtonBase-root-MuiButton-root'.</msg>
+<arg>${CONFIRM_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:24:01.195872" elapsed="1.232983"/>
+</kw>
+<status status="PASS" start="2026-03-21T22:24:00.863686" elapsed="1.565380"/>
+</kw>
+<kw name="Select First Checkbox" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//fieldset</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:24:02.430289" elapsed="9.578002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-21T22:24:17.010255" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-21T22:24:12.008718" elapsed="5.001795"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:17.011579" level="INFO">Clicking element 'xpath=(//fieldset//input[@type="checkbox"])[1]'.</msg>
+<arg>${FIRST_CHECKBOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:24:17.010998" elapsed="0.235483"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:17.247284" level="INFO">Verifying checkbox 'xpath=(//fieldset//input[@type="checkbox"])[1]' is selected.</msg>
+<arg>${FIRST_CHECKBOX}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2026-03-21T22:24:17.246851" elapsed="0.025159"/>
+</kw>
+<status status="PASS" start="2026-03-21T22:24:02.429770" elapsed="14.842503"/>
+</kw>
+<kw name="Click Move On icon" owner="product_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-21T22:24:22.275404" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-21T22:24:17.274013" elapsed="5.001770"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:[class*="px-2"]</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-21T22:24:22.276382" elapsed="0.009707"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:22.287412" level="INFO">Executing JavaScript:
+document.querySelector('[class*="px-2 py-1"]').click();
+Without any arguments.</msg>
+<arg>document.querySelector('[class*="px-2 py-1"]').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-03-21T22:24:22.286370" elapsed="0.308847"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-21T22:24:27.596703" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-21T22:24:22.595375" elapsed="5.001897"/>
+</kw>
+<status status="PASS" start="2026-03-21T22:24:17.273275" elapsed="10.324415"/>
+</kw>
+<kw name="Zoom Out Page" owner="product_page">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:27.601290" level="INFO">Executing JavaScript:
+document.body.style.zoom='67%'
+Without any arguments.</msg>
+<arg>document.body.style.zoom='${level}'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-03-21T22:24:27.599959" elapsed="0.012484"/>
+</kw>
+<status status="PASS" start="2026-03-21T22:24:27.599192" elapsed="0.013424"/>
+</kw>
+<kw name="Open Overall Analysis Page" owner="overall_analysis_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TABLE_CHECKBOX}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:24:27.613635" elapsed="0.074835"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:27.689636" level="INFO">Clicking element 'xpath=//div[contains(@class,'ag-selection-checkbox')]'.</msg>
+<arg>${TABLE_CHECKBOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:24:27.688768" elapsed="0.085269"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${GRAPH_ICON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:24:27.774183" elapsed="0.024860"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${GRAPH_ICON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-21T22:24:27.799375" elapsed="0.300369"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:28.100316" level="INFO">Clicking element 'xpath=//*[@data-testid='AutoGraphRoundedIcon']/ancestor::button'.</msg>
+<arg>xpath=//*[@data-testid='AutoGraphRoundedIcon']/ancestor::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:24:28.100024" elapsed="0.074112"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${GRAPH_ICON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:24:28.174519" elapsed="0.036244"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-testid='AutoGraphRoundedIcon']/ancestor::button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-03-21T22:24:28.211137" elapsed="0.026738"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:28.238484" level="INFO">Clicking element 'xpath=//*[@data-testid='AutoGraphRoundedIcon']/ancestor::button'.</msg>
+<arg>xpath=//*[@data-testid='AutoGraphRoundedIcon']/ancestor::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:24:28.238176" elapsed="0.081068"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:28.319937" level="INFO">Simulating Mouse Over on element 'css:[data-testid="AutoGraphRoundedIcon"]'.</msg>
+<arg>css:[data-testid="AutoGraphRoundedIcon"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2026-03-21T22:24:28.319596" elapsed="0.290979"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[data-testid="TimelineRoundedIcon"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-21T22:24:28.610774" elapsed="0.017492"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-21T22:24:28.628738" level="INFO">Clicking element 'css:[data-testid="TimelineRoundedIcon"]'.</msg>
+<msg time="2026-03-21T22:24:29.043112" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-03-21T22:24:29.043478" level="FAIL">ElementClickInterceptedException: Message: Element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ifmvq3-MuiSvgIcon-root"&gt; is not clickable at point (707,455) because another element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11six1n-MuiSvgIcon-root"&gt; obscures it; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:354:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:175:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:134:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:328:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:210:31
+</msg>
+<arg>css:[data-testid="TimelineRoundedIcon"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-03-21T22:24:28.628560" elapsed="0.416836">ElementClickInterceptedException: Message: Element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ifmvq3-MuiSvgIcon-root"&gt; is not clickable at point (707,455) because another element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11six1n-MuiSvgIcon-root"&gt; obscures it; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:354:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:175:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:134:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:328:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:210:31
+</status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'loader-container')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" start="2026-03-21T22:24:29.045619" elapsed="0.000031"/>
+</kw>
+<status status="FAIL" start="2026-03-21T22:24:27.613249" elapsed="1.432675">ElementClickInterceptedException: Message: Element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ifmvq3-MuiSvgIcon-root"&gt; is not clickable at point (707,455) because another element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11six1n-MuiSvgIcon-root"&gt; obscures it; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:354:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:175:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:134:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:328:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:210:31
+</status>
+</kw>
+<kw name="Remove Variables" owner="overall_analysis_page">
+<status status="NOT RUN" start="2026-03-21T22:24:29.046529" elapsed="0.000038"/>
+</kw>
+<kw name="Select Checkbox By Value" owner="common_keywords">
+<arg>ITM_Frag_T,R_OO_Frag</arg>
+<status status="NOT RUN" start="2026-03-21T22:24:29.047265" elapsed="0.000056"/>
+</kw>
+<kw name="Select Checkbox By Value" owner="common_keywords">
+<arg>R_OO,ITM_OO_1</arg>
+<status status="NOT RUN" start="2026-03-21T22:24:29.047561" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2026-03-21T22:23:20.051148" elapsed="68.996709">ElementClickInterceptedException: Message: Element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ifmvq3-MuiSvgIcon-root"&gt; is not clickable at point (707,455) because another element &lt;svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11six1n-MuiSvgIcon-root"&gt; obscures it; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:354:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:175:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:134:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:328:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:210:31
+</status>
+</test>
+<status status="FAIL" start="2026-03-21T22:23:19.778140" elapsed="69.273378"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Deo Hut Tests" id="s1" pass="0" fail="1" skip="0">Deo Hut Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-03-21T22:23:20.052932" level="WARN">service_log_path is being deprecated. Please use service to configure log_output or equivalent service attribute.</msg>
+</errors>
+</robot>

@@ -10,7 +10,7 @@ ${NEXT_BUTTON}       xpath://*[@id="idSIButton9"]
 *** Keywords ***
 
 Open Deo Hut Website
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}    service_log_path=logs/gecko.log
     Maximize Browser Window
 
 Login With Email
