@@ -7,6 +7,10 @@ output.xml
 log.html
 report.html
 
+# Screenshots
+*.png
+tests/*.png
+
 # Python
 __pycache__/
 *.pyc
@@ -17,8 +21,3 @@ venv/
 # IDE
 .idea/
 .vscode/
-
-# Screenshots
-tests/*.png
-*.png
-
