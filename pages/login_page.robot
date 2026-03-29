@@ -1,11 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
+# Library    SeleniumLibrary
 Resource   ../variables/testdata.robot
-
-*** Variables ***
-${USERNAME_FIELD}    xpath://*[@id="i0116"]
-${PASSWORD_FIELD}    xpath://*[@id="i0118"]
-${NEXT_BUTTON}       xpath://*[@id="idSIButton9"]
 
 *** Keywords ***
 

@@ -1,7 +1,6 @@
 # Logs
 *.log
 
-
 # Robot Framework outputs
 output.xml
 log.html
@@ -24,3 +23,7 @@ venv/
 # Robot results
 results/*
 !results/.keep
+
+results/
+logs/
+*.png

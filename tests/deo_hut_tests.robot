@@ -1,4 +1,5 @@
 *** Settings ***
+Library    SeleniumLibrary    screenshot_root_directory=results/screenshots
 Resource    ../pages/login_page.robot
 Resource    ../pages/product_page.robot
 Resource    ../pages/overall_analysis_page.robot
@@ -18,11 +19,8 @@ Verify DEO HUT
     Open Overall Analysis Page
 
     Remove Variables
-    # Select the first one
-    Select Checkbox By Value    ITM_Frag_T,R_OO_Frag
+    Select Analysis Variables
     
-    # Select the second one
-    Select Checkbox By Value    R_OO,ITM_OO_1   
 
     
 

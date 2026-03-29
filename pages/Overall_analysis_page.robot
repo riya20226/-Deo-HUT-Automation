@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../resources/common_keywords.robot
 Resource    ../resources/variables.robot
-Library    SeleniumLibrary
+# Library    SeleniumLibrary
 
 # *** Variables ***
 # ${TABLE_CHECKBOX}     xpath=//div[contains(@class,'ag-selection-checkbox')]
@@ -49,7 +49,6 @@ Open Overall Analysis Page
 #     # Click via label (important)
 #     Click Element    xpath=(//input[@value='R_OO,ITM_OO_1'])[1]/parent::span
 
-*** Keywords ***
 Remove Variables
     Wait For Loader To Disappear
     
@@ -70,8 +69,9 @@ Remove Variables
     
     Wait For Loader To Disappear
 
-
 Select Analysis Variables
-    Select Checkbox By Value    R_OO,ITM_OO_1
-    Select Checkbox By Value    ITM_Frag_T,R_OO_Frag
+    Select Checkbox By Value    ${CHECKBOX_1_VALUE} 
+    Select Checkbox By Value    ${CHECKBOX_2_VALUE} 
+    Sleep    1s
+
    

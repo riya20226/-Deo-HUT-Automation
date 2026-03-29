@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+# Library    SeleniumLibrary
 
 *** Variables ***
 ${DEODORANTS_SELECTOR}    xpath=//label[@for="Deodorants"]
