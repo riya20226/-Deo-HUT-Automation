@@ -1,10 +1,13 @@
 # Logs
+logs/
 *.log
 
 # Robot Framework outputs
 output.xml
 log.html
 report.html
+results/
+!results/.keep
 
 # Screenshots
 *.png
@@ -19,11 +22,3 @@ venv/
 # IDE
 .idea/
 .vscode/
-
-# Robot results
-results/*
-!results/.keep
-
-results/
-logs/
-*.png
