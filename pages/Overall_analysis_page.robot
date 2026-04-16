@@ -1,12 +1,6 @@
 *** Settings ***
 Resource    ../resources/common_keywords.robot
 Resource    ../resources/variables.robot
-# Library    SeleniumLibrary
-
-# *** Variables ***
-# ${TABLE_CHECKBOX}     xpath=//div[contains(@class,'ag-selection-checkbox')]
-# ${GRAPH_ICON}         xpath=//*[@data-testid='AutoGraphRoundedIcon']
-# ${TIMELINE_ICON}      css:[data-testid="TimelineRoundedIcon"]
 
 *** Keywords ***
 
@@ -49,24 +43,26 @@ Open Overall Analysis Page
 #     # Click via label (important)
 #     Click Element    xpath=(//input[@value='R_OO,ITM_OO_1'])[1]/parent::span
 
-Remove Variables
+Click Remove Variables Button
     Wait For Loader To Disappear
-    
-    # Robust locator for the button text
+
     ${btn}=    Set Variable    xpath=//button[contains(.,'Remove Variables')]
-    
+
+    # Wait until button is present & enabled (important after checkbox selection)
     Wait Until Page Contains Element    ${btn}    15s
+    Wait Until Element Is Enabled       ${btn}    10s
+
     Scroll Element Into View    ${btn}
     Sleep    1s
-    
-    # Try standard click first
-    ${status}=    Run Keyword And Return Status    Click Element    ${btn}
-    
-    # If standard click fails, use JavaScript (Guaranteed to trigger)
+
+    ${status}=    Run Keyword And Return Status
+    ...    Click Element    ${btn}
+
     IF    not ${status}
-        Execute JavaScript    document.evaluate("//button[contains(.,'Remove Variables')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+        Execute JavaScript
+        ...    document.evaluate("//button[contains(.,'Remove Variables')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
     END
-    
+
     Wait For Loader To Disappear
 
 Select Analysis Variables
@@ -74,4 +70,68 @@ Select Analysis Variables
     Select Checkbox By Value    ${CHECKBOX_2_VALUE} 
     Sleep    1s
 
-   
+    Click Remove Variables Button
+
+Click T-Test Button
+    Wait For Loader To Disappear
+
+    ${btn}=    Set Variable    xpath=//*[@data-testid='ScienceIcon']/ancestor::button
+
+    Wait Until Page Contains Element    ${btn}    15s
+    Wait Until Element Is Visible       ${btn}    10s
+    Wait Until Element Is Enabled       ${btn}    10s
+
+    Scroll Element Into View    ${btn}
+    Sleep    1s
+
+    ${status}=    Run Keyword And Return Status
+    ...    Click Element    ${btn}
+
+    IF    not ${status}
+        Execute JavaScript
+        ...    document.querySelector("[data-testid='ScienceIcon']").closest('button').click()
+    END
+
+Select T-Test Comparison
+    ${option}=    Set Variable    xpath=//span[normalize-space()="Student's T Test Comparisons"]
+
+    Wait Until Page Contains Element    ${option}    15s
+    Scroll Element Into View            ${option}
+
+    Click Element    ${option}
+
+Select Confidence Level
+    ${radio}=    Set Variable    xpath=//input[@type='radio' and @value='0.95']
+
+    Wait Until Page Contains Element    ${radio}    15s
+
+    ${status}=    Run Keyword And Return Status
+    ...    Click Element    ${radio}
+
+    IF    not ${status}
+        Execute JavaScript
+        ...    document.querySelector("input[type='radio'][value='0.95']").click()
+    END
+
+Select All Variables
+    Wait For Loader To Disappear
+
+    ${btn}=    Set Variable
+    ...    xpath=//*[contains(@class,'MuiFormControlLabel-label') and contains(.,'Select')]
+
+    Wait Until Page Contains Element    ${btn}    20s
+    Scroll Element Into View            ${btn}
+    Sleep    1s
+
+    ${status}=    Run Keyword And Return Status
+    ...    Click Element    ${btn}
+
+    IF    not ${status}
+        Execute JavaScript
+        ...    document.evaluate("//*[contains(@class,'MuiFormControlLabel-label') and contains(.,'Select')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+    END
+
+Click Get Results Button
+    Wait For Loader To Disappear
+    Click Element    xpath=//button[normalize-space()='Get Results']    
+

@@ -19,3 +19,9 @@ ${CHECKBOX_2_VALUE}    ITM_Frag_T,R_OO_Frag
 
 ${CHECKBOX_INPUT}      xpath=//input[@value='{}']
 ${CHECKBOX_CLICK}      xpath=//input[@value='{}']/parent::span
+
+${T_TEST_BUTTON}          xpath=//*[@data-testid='ScienceIcon']/ancestor::button
+${T_TEST_COMPARISON}      xpath=//*[contains(text(),"Student's T Test Comparisons")]
+${CONFIDENCE_095}         xpath=//input[@type='radio' and @value='0.95']
+${SELECT_ALL}             xpath=//*[contains(@class,'MuiFormControlLabel-label') and contains(.,'Select')]
+${GET_RESULTS_BTN}        xpath=//button[normalize-space()='Get Results']

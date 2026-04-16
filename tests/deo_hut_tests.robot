@@ -17,10 +17,16 @@ Verify DEO HUT
     Zoom Out Page
 
     Open Overall Analysis Page
-
-    Remove Variables
+    Click Remove Variables Button
+    #Remove Variables
     Select Analysis Variables
-    
+    Click T-Test Button
+
+Perform T-Test Configuration
+    Select T-Test Comparison
+    Select Confidence Level
+    Select All Variables
+    Click Get Results Button
 
     
 
